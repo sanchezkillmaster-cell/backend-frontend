@@ -76,6 +76,7 @@ logoutBtn.addEventListener('click', () => {
 
 // 4. CONSUMO DE API - OBTENER TAREAS (GET /tasks)
 async function cargarTareas() {
+
     try {
         const res = await fetch(API_URL);
         const respuesta = await res.json();
@@ -157,6 +158,7 @@ taskForm.addEventListener('submit', async (e) => {
                 description,
                 author: AUTHOR
             })
+
         });
 
         const respuesta = await res.json();
@@ -238,6 +240,7 @@ function eliminarTarea(id) {
         }
     );
 }
+
 
 // 8. INICIALIZACIÓN DE LA APLICACIÓN AL CARGAR LA PÁGINA
 checkSession();
